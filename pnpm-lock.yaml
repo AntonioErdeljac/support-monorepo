@@ -26,6 +26,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@workspace/math':
+        specifier: workspace:*
+        version: link:../../packages/math
       '@workspace/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -72,9 +75,6 @@ importers:
       '@workspace/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      convex:
-        specifier: ^1.25.4
-        version: 1.25.4(react@19.0.0)
       lucide-react:
         specifier: ^0.475.0
         version: 0.475.0(react@19.0.0)
@@ -115,10 +115,16 @@ importers:
       convex:
         specifier: ^1.25.4
         version: 1.25.4(react@19.0.0)
-    devDependencies:
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
+    devDependencies:
+      '@workspace/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@workspace/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
 
   packages/eslint-config:
     devDependencies:
@@ -158,6 +164,15 @@ importers:
       typescript-eslint:
         specifier: ^8.24.1
         version: 8.24.1(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)
+
+  packages/math:
+    devDependencies:
+      '@workspace/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      typescript:
+        specifier: latest
+        version: 5.8.3
 
   packages/typescript-config: {}
 

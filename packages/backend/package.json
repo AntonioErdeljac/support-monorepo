@@ -1,18 +1,20 @@
 {
-  "name": "@packages/backend",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@workspace/backend",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "convex dev",
-    "setup": "convex dev --until-success",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "setup": "convex dev --until-success"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "convex": "^1.25.4"
+  "exports": {
+    "./convex": "./convex/*.ts"
   },
   "devDependencies": {
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*"
+  },
+  "dependencies": {
+    "convex": "^1.25.4",
     "typescript": "^5.8.3"
   }
 }

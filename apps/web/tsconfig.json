@@ -4,7 +4,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@workspace/ui/*": ["../../packages/ui/src/*"]
+      "@workspace/ui/*": ["../../packages/ui/src/*"],
+      "@workspace/math/*": ["../../packages/math/src/*"],
+      "@workspace/backend/*": ["../../packages/backend/*"]
     },
     "plugins": [
       {
